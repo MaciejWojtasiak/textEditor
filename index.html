@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <div id="editor">
+            <ul id="list">
+                <button class="item" id="bold" onclick='textEditor.document.execCommand("bold", false, "");'><i
+                class="icon-bold"></i></button>
+                <button class="item" id="italic" onclick='textEditor.document.execCommand("italic", false, "");'><i
+                class="icon-italic"></i></button>
+                <button class="item" id="bullet" onclick='textEditor.document.execCommand("insertUnorderedList", false, "");'><i class="icon-list-ul"></i></button>
+            </ul>
+    
+            <iframe  frameborder="0" style="width:80%;height:75%" name="textEditor"></iframe>
+            <div id="buttons">                
+                <input type="file" onchange="loadFile(this.files[0])">
+                <button id="saveBtn">Save document</button>
+            </div>            
+        </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
